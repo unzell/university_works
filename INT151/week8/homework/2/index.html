@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HW Archive - DOM Manipulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="archive-container">
+    <!-- Header -->
+    <header class="card-header">
+      <div class="meta-tag">JavaScript / DOM</div>
+      <h1 class="card-title">ข้อ 2: ปุ่มอ่านเพิ่มเติม / ย่อ (classList.toggle)</h1>
+    </header>
+
+    <!-- Description & Instructions -->
+    <section class="section">
+      <h2 class="section-title">โจทย์ (Instructions)</h2>
+      <ul class="task-list">
+        <li>มี <code>&lt;button id="toggle-btn"&gt;อ่านเพิ่มเติม&lt;/button&gt;</code> และ <code>&lt;p id="detail" class="hidden"&gt;...&lt;/p&gt;</code></li>
+        <li>CSS ซ่อน element ที่มีคลาส <code>.hidden</code> ไว้ล่วงหน้า</li>
+        <li>เขียนโค้ดผูก <code>click</code> event ที่ปุ่ม ให้สลับ (toggle) คลาส <code>hidden</code> ของ <code>&lt;p&gt;</code> ทุกครั้งที่กด</li>
+      </ul>
+    </section>
+
+    <!-- Live Preview Sandbox -->
+    <section class="section">
+      <h2 class="section-title">พรีวิวการทำงาน (Live Preview)</h2>
+      <div class="preview-box">
+        <button id="toggle-btn" class="btn">อ่านเพิ่มเติม</button>
+        <p id="detail" class="detail-text hidden">
+          รายละเอียดสินค้า: เสื้อยืดคอกลม ผ้าฝ้าย 100% มีให้เลือก 5 สี
+        </p>
+      </div>
+    </section>
+
+    <!-- Source Code / Solution Archive -->
+    <section class="section">
+      <h2 class="section-title">เฉลยโค้ด (Solution Code)</h2>
+      <div class="code-wrapper">
+        <pre><code><span class="token-comment">// ผูก element</span>
+<span class="token-keyword">const</span> toggleBtn = document.<span class="token-func">querySelector</span>(<span class="token-string">'#toggle-btn'</span>);
+<span class="token-keyword">const</span> detail = document.<span class="token-func">querySelector</span>(<span class="token-string">'#detail'</span>);
+
+<span class="token-comment">// Event Listener สำหรับสลับการแสดงผล</span>
+toggleBtn.<span class="token-func">addEventListener</span>(<span class="token-string">'click'</span>, () => {
+  detail.classList.<span class="token-func">toggle</span>(<span class="token-string">'hidden'</span>);
+});</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
