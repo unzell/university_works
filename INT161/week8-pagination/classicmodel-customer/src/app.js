@@ -1,9 +1,14 @@
 import express from 'express'
 import customerRouter from './routes/customer-route.js'
 import {errorHandler} from "./middlewares/errorHandler.js";
+import {queryParser} from "./middlewares/pagination-middleware.js";
 
 const app = express()
 app.use(express.json())
+
+//must call this before route or else the query will not be parsed before routing
+app.use(queryParser())
+
 
 const STUDENT_ID = '68130500044'
 app.use(`/api/${STUDENT_ID}/`, customerRouter)
@@ -12,7 +17,7 @@ app.listen(3000, () => {
     console.log('Example app listening on port 3000')
 })
 
-app.use((err,req,res,next) => errorHandler(err,req,res,next))
+app.use(errorHandler)
 
 // app.use((err, req, res, next) => {
 //     // if (err.code == "ER_DUP_ENTRY") {

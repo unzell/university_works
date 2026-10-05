@@ -4,11 +4,8 @@ import express from "express"
 const router = express.Router()
 
 router.get("/customers", async (req, res) => {
-    const pagination = req.query;
-    let { page, limit } = pagination;
-    page = Math.max(1, parseInt(page, 10)) || 1;
-    limit = Math.min(100, Math.max(parseInt(limit, 10),1)) || 10;
-    const objects = await service.getAllObjects({page, limit})
+    console.log(req.pagination)
+    const objects = await service.getAllObjects(req.pagination)
     res.json(objects)
 })
 

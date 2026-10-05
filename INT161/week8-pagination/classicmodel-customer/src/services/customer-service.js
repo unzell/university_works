@@ -5,9 +5,7 @@ export async function getObject(id) {
 }
 
 export async function getAllObjects(pagination=null) {
-    const {page, limit} = pagination;
-    const offset = (page - 1) * limit
-    return await repo.findAll({ limit, offset})
+    return await repo.findAll(pagination)
 }
 
 export async function updateObject(id, data) {
