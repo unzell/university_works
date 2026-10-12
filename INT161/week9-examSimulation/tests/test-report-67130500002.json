@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-10-12T09:58:01.438Z",
+  "student": {
+    "id": "67130500002",
+    "name": "Unknown Student",
+    "secretKey": "N/A"
+  },
+  "totalScore": 0,
+  "maxScore": 100,
+  "results": [
+    {
+      "name": "Student Identity Endpoint",
+      "category": "1. Identity",
+      "points": 0,
+      "maxPoints": 10,
+      "passed": false,
+      "duration": 12,
+      "error": "Expected HTTP 200, got 404"
+    },
+    {
+      "name": "GET All Brands (List)",
+      "category": "2. Brands API",
+      "points": 0,
+      "maxPoints": 5,
+      "passed": false,
+      "duration": 2,
+      "error": "Expected HTTP 200, got 404"
+    },
+    {
+      "name": "GET Brand by ID & 404 Check",
+      "category": "2. Brands API",
+      "points": 0,
+      "maxPoints": 5,
+      "passed": false,
+      "duration": 3,
+      "error": "GET /brands/1 expected HTTP 200, got 404"
+    },
+    {
+      "name": "GET Products Pagination Envelope",
+      "category": "3. Products Query",
+      "points": 0,
+      "maxPoints": 15,
+      "passed": false,
+      "duration": 2,
+      "error": "Expected HTTP 200, got 404"
+    },
+    {
+      "name": "Summary DTO Filtering (GET /products)",
+      "category": "3. Products Query",
+      "points": 0,
+      "maxPoints": 10,
+      "passed": false,
+      "duration": 7,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+    },
+    {
+      "name": "GET Product by ID & Detail DTO",
+      "category": "3. Products Query",
+      "points": 0,
+      "maxPoints": 10,
+      "passed": false,
+      "duration": 2,
+      "error": "GET /products/1 expected HTTP 200, got 404"
+    },
+    {
+      "name": "POST Create Product (201 Created)",
+      "category": "4. Products Modify",
+      "points": 0,
+      "maxPoints": 10,
+      "passed": false,
+      "duration": 7,
+      "error": "Expected HTTP 201 Created, got 404"
+    },
+    {
+      "name": "PUT Update Product (200 OK)",
+      "category": "4. Products Modify",
+      "points": 0,
+      "maxPoints": 10,
+      "passed": false,
+      "duration": 0,
+      "error": "Skipped: Created product ID not found"
+    },
+    {
+      "name": "DELETE Product (204 No Content)",
+      "category": "4. Products Modify",
+      "points": 0,
+      "maxPoints": 10,
+      "passed": false,
+      "duration": 1,
+      "error": "Skipped: Created product ID not found"
+    },
+    {
+      "name": "Duplicate SKU Conflict Handling (409 Conflict)",
+      "category": "5. Standards & Error",
+      "points": 0,
+      "maxPoints": 5,
+      "passed": false,
+      "duration": 3,
+      "error": "Expected HTTP 409 Conflict (or 400 Bad Request) for duplicate SKU, got 404"
+    },
+    {
+      "name": "Standard JSON Envelope Format",
+      "category": "5. Standards & Error",
+      "points": 0,
+      "maxPoints": 5,
+      "passed": false,
+      "duration": 4,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+    },
+    {
+      "name": "RESTful Clean Route Hierarchy",
+      "category": "5. Standards & Error",
+      "points": 0,
+      "maxPoints": 5,
+      "passed": false,
+      "duration": 2,
+      "error": "Standard plural resource /products must be used"
+    }
+  ]
+}
